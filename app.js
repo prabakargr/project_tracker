@@ -21,8 +21,6 @@ app.use ('/projects',projectsRouter);//projects
 
 
 
-var port=process.env.PORT || '3000';
-
-app.set('port',port);
+var port=process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`Running on localhost:3000`));
