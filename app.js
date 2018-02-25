@@ -19,6 +19,10 @@ app.use ('/users',usersRouter);//users
 
 app.use ('/projects',projectsRouter);//projects
 
+app.use('/get',function(err,res){
+    res.send('got')
+})
+
 
 
 var port=process.env.PORT || 3000;
