@@ -3,7 +3,8 @@ var express=require('express');
 var usersController=require('./usersController');
 
 var usersRouter=express.Router();
-
+usersRouter.route('/allusers')
+     .get(usersController.getusers);
 usersRouter.route('/adduser')
     .post(usersController.addUser);
 usersRouter.route('/findmatch')    

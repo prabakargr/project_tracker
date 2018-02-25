@@ -13,6 +13,18 @@ var addUser=function (req,res) {
     });
 };
 
+// get allusers
+
+var getusers=function(req,res){
+    User.find(function(err,users){
+        if(err){
+            res.send('cannot get users')
+        }else{
+            res.send(users);
+        }
+    })
+}
+
 // forgot password
 
 var findProfile=function(req,res){
@@ -84,5 +96,6 @@ module.exports={
     addUser:addUser,
     findProfile:findProfile,
     login:login,
-    patch_changepwd:patch_changepwd
+    patch_changepwd:patch_changepwd,
+    getusers:getusers
 }
