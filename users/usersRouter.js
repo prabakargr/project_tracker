@@ -7,6 +7,8 @@ usersRouter.route('/allusers')
      .get(usersController.getusers);
 usersRouter.route('/adduser')
     .post(usersController.addUser);
+usersRouter.route('/updateprofile')
+    .patch(usersController.update_profile)    
 usersRouter.route('/findmatch')    
     .post(usersController.findProfile);
 usersRouter.route('/changepwd')
